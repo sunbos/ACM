@@ -1,0 +1,33 @@
+这道题主要运用了STL里set的insert的特性来解决问题
+
+只要你往set里添加元素，它就会自动排序(从小到大排序)，而且，如果你添加的元素set里面本来就存在，那么这次添加操作就不执行(例如有两个2,它只会读一个)。要想用set先加个头文件set。
+
+举例:
+
+输入一个数字n,代表数字个数。要求:对这n个数字进行从小到大排序,如果数字存在,则不重复输出,并求出这组输出的数据有多少个(有多少个不同的数字)。
+
+代码:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+set<int>s;
+set<int > ::iterator j;
+
+int main()
+{
+    int n,i,x;
+    cin>>n;
+    for(i = 0; i < n; i++)
+    {
+        cin>>x;
+        s.insert(x);
+    }
+    for( j = s.begin(); j != s.end(); j++)
+    {
+        cout<< *j<<" ";
+    }
+    cout<<endl;
+    cout<<s.size()<<endl;
+    s.clear();
+}
