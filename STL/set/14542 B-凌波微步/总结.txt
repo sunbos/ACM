@@ -11,8 +11,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-set<int>s;
-set<int> ::iterator j;      //迭代器
+set<int> s;
+set<int> ::iterator j;      //迭代器j
 
 int main()
 {
